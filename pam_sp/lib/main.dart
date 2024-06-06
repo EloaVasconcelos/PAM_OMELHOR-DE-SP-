@@ -1,13 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:pam_sp/segtela.dart'; 
-
-// Criando a calsse MainApp 
+ 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key}); // é o construtor da Main
+  const MainApp({super.key}); 
 
 
-// Começando o Código da interface 
+// Começando o Código 
   @override
   Widget build(BuildContext context) {
          return const MaterialApp(   // Retornado o MaterialApp (seguestão )
@@ -41,10 +40,10 @@ class MainApp extends StatelessWidget {
                // Acresentando mais uma texto para a implementação de outra frase 
                 Center(
                   child: Text(
-                    'A melhor culinária especialmente para você!',
-                    style: TextStyle( //Estilizando o texto 
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      fontSize: 18, // Definindo o Tamanho
+                  'A melhor culinária especialmente para você!',
+                  style: TextStyle( //Estilizando o texto 
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    fontSize: 18, // Definindo o Tamanho
                       fontFamily: 'Arial', // Escolha da fonte 
                     ),
                   ),
@@ -72,7 +71,7 @@ class BackgroundApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Image.asset(
-      'assets/foto.png',  // Caminho da Imagem
+      'assets/fundonovo.png',  // Caminho da Imagem
       fit: BoxFit.cover,  // Para a imagem ficar fixa 
       width: double.infinity,  // imagem até o maximo da tela 
       height: double.infinity, // imagem até o maximo da tela 
@@ -96,7 +95,7 @@ class IconeNext extends StatelessWidget {
           iconSize: 24, // Tamanho do ícone
           icon: Image.asset('assets/seta.png'), //Caminho da Imagem do ícone
           onPressed: () {  // Quando Clicar 
-            Navigator.push(
+            Navigator.push(  //Utilizando o Push e passando o context
               context,
               MaterialPageRoute(builder: (context) => const segtela()), // Ir para a seguinte página
             );

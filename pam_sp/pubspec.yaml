@@ -7,6 +7,7 @@ environment:
   sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
+  carousel_slider: ^4.2.1
   flutter:
     sdk: flutter
 
@@ -19,9 +20,22 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/foto.png
+    - assets/fundonovo.png
     - assets/seta.png
     - assets/image1.png
     - assets/image2.png
-    - assets/feijoada.jpg
+    - assets/coracaobranci.png
+    - assets/1.png
+    - assets/2.png
+    - assets/3.png
+    - assets/4.png
+  
+
+
+
+
+
+
+
+
     
