@@ -71,7 +71,7 @@ https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVE
 > 
 > Link da Wiki com a descrição do desenvolvimento PARTE 2 
 >
-https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVEGA%C3%87%C3%83O
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESENVOLVIMENTO-DO-PROJETO#descri%C3%A7%C3%A3o-do-desenvolvimento---parte-2
 >
 
 
