@@ -49,4 +49,62 @@ https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/TELAS-PROGRAMADAS-%E2
 >
 https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESENVOLVIMENTO-DO-PROJETO
 
+<BR>
+
+# 2 BIMESTRE - ALTERAÇÕES E DESENVOLVIMENTO 
+> DUPLA: Eloá Vasconcelos de Macedo e Isabela Oliveira
+>
+> ## Layout
+>
+> O protótipo do aplicativo foi alterado, adicionando novas telas de navegação: Tela dos restaurantes com função de favoritar, tela de login e perfil 
+> Link do Wiki com a nova versão do layout, juntamente com o mapa de navegação:
+> 
+> Novo Mapa de Navegação e Layout 
+>
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVEGA%C3%87%C3%83O
+>
+
+<BR>
+
+>
+> ## DESENVOLVIMENTO - PARTE 2
+> 
+> Link da Wiki com a descrição do desenvolvimento PARTE 2 
+>
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVEGA%C3%87%C3%83O
+>
+
+
+
+<BR>
+
+>
+> ## VÍDEO E PRINT DAS TELAS PROGRAMADAS 
+> 
+> Link da Wiki com o vídeo e print das telas programadas 
+>
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVEGA%C3%87%C3%83O
+>
+
+
+<BR>
+
+>
+> ## SITES DE APOIO  
+> 
+> Sites utilizados para apoio no desenvolvimento do projeto 
+>
+> Slide_carousel dart
+>
+https://pub.dev/packages/carousel_slider
+>
+https://gist.github.com/messaismael/cc2808c3ad2fc2a4463f0e218234d867
+>
+> Tranmissão de Dados
+>
+https://github.com/alinefbrito/flutter_exemplo01/branches
+
+
+
+
 
