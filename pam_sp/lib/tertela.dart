@@ -109,7 +109,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                       width: MediaQuery.of(context).size.width,
                       margin: const EdgeInsets.symmetric(horizontal: 5.0),
                       decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 134, 69, 37).withOpacity(0.5), //Cor de fundo do carrossel/ prototipo 
+                      color: const Color.fromARGB(255, 134, 69, 37).withOpacity(0.9), //Cor de fundo do carrossel/ prototipo 
                       borderRadius: BorderRadius.circular(8.0), //arredondar
                       ),
                       child: Column(
@@ -166,7 +166,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => const telalogin(), //Ao clicar no ícone de coração a tela de login
+                                  builder: (context) => const TelaLogin(), //Ao clicar no ícone de coração a tela de login
                                 ),
                               );
                             },

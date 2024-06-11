@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "pam_sp",
+            "cwd": "pam_sp",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "pam_sp (profile mode)",
+            "cwd": "pam_sp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "pam_sp (release mode)",
+            "cwd": "pam_sp",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
