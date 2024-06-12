@@ -52,7 +52,7 @@ https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESENVOLVIMENTO-DO-PR
 <BR>
 
 # 2 BIMESTRE - ALTERAÇÕES E DESENVOLVIMENTO 
-> DUPLA: Eloá Vasconcelos de Macedo e Isabela Oliveira
+> DUPLA: Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves
 >
 > ## Layout
 >
