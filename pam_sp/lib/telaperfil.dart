@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:pam_sp/telalogin.dart';
 
 class TelaPerfil extends StatelessWidget {
-  final String userEmail;
+  final String email;
 
-  const TelaPerfil({Key key, @required this.userEmail}) : super(key: key);
+  const TelaPerfil({required this.email, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +25,15 @@ class TelaPerfil extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 20),
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 60,
                 backgroundImage: AssetImage('assets/perfil.png'),
                 backgroundColor: Colors.transparent,
               ),
               const SizedBox(height: 20),
               Text(
-                'Email: $userEmail',
-                style: TextStyle(
+                'Email: $email',
+                style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -67,4 +68,10 @@ class TelaPerfil extends StatelessWidget {
       ),
     );
   }
+}
+
+void main() {
+  runApp(const MaterialApp(
+    home: TelaLogin(),
+  ));
 }

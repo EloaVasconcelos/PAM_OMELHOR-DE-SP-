@@ -2,18 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:pam_sp/telacadastrar.dart';
 import 'package:pam_sp/telaperfil.dart';
 
-class TelaLogin extends StatelessWidget {
-  const TelaLogin({Key key}) : super(key: key);
+class TelaLogin extends StatefulWidget {
+  const TelaLogin({super.key});
 
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _senhaController = TextEditingController();
+  @override
+  _TelaLoginState createState() => _TelaLoginState();
+}
+
+class _TelaLoginState extends State<TelaLogin> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController senhaController = TextEditingController();
+
+  void _login() {
+    String email = emailController.text;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TelaPerfil(email: email),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Login - O Melhor de SP'),
-      ),
+     return Scaffold(
       body: Stack(
         children: [
           // Imagem de fundo
@@ -23,27 +36,20 @@ class TelaLogin extends StatelessWidget {
             width: double.infinity, // Largura máxima da tela
             height: double.infinity, // Altura máxima da tela
           ),
-          // Container centralizado com os campos de login
+          // Centered container with login fields
           Center(
             child: Container(
               padding: const EdgeInsets.all(20),
-              width: 350, // Largura do container
+              width: 350, // Width of the container
               decoration: BoxDecoration(
-                color: Colors.white, // Cor de fundo do container
-                borderRadius: BorderRadius.circular(20), // Cantos arredondados
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26, // Sombra preta suave
-                    blurRadius: 10, // Desfocagem da sombra
-                    offset: Offset(0, 4), // Deslocamento da sombra
-                  ),
-                ],
+                color: Colors.white, // Background color
+                borderRadius: BorderRadius.circular(20), // Rounded corners
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Login',
                     style: TextStyle(
                       fontSize: 24,
@@ -52,7 +58,7 @@ class TelaLogin extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  Text(
+                  const Text(
                     'Seja Bem-Vindo!',
                     style: TextStyle(
                       fontSize: 18,
@@ -60,9 +66,9 @@ class TelaLogin extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // Campo de texto para Email
+                  // Email text field
                   TextField(
-                    controller: _emailController,
+                    controller: emailController,
                     decoration: InputDecoration(
                       labelText: 'Email',
                       border: OutlineInputBorder(
@@ -71,9 +77,9 @@ class TelaLogin extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  // Campo de texto para Senha
+                  // Password text field
                   TextField(
-                    controller: _senhaController,
+                    controller: senhaController,
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Senha',
@@ -83,23 +89,17 @@ class TelaLogin extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // Botão "Logar"
+                  // "Logar" button
                   ElevatedButton(
-                    onPressed: () {
-                      // Envia apenas o email para a próxima tela
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => TelaPerfil(email: _emailController.text)),
-                      );
-                    },
+                    onPressed: _login,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF8B4513), // Cor marrom
+                      backgroundColor: const Color(0xFF8B4513), // Brown color
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
                       padding: const EdgeInsets.symmetric(vertical: 15),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         'Logar',
                         style: TextStyle(
@@ -110,17 +110,17 @@ class TelaLogin extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10),
-                  // Botão "Cadastrar-se"
+                  // "Cadastrar-se" button
                   Center(
                     child: TextButton(
                       onPressed: () {
-                        // Navega para a tela de cadastro ao clicar em "Cadastra-se"
+                        // Navigate to the registration screen
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => const TelaCadastro()),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Cadastra-se',
                         style: TextStyle(
                           fontSize: 16,
@@ -137,51 +137,4 @@ class TelaLogin extends StatelessWidget {
       ),
     );
   }
-}
-
-class TelaPerfil extends StatelessWidget {
-  final String email;
-
-  const TelaPerfil({Key key, @required this.email}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color.fromARGB(221, 64, 63, 63),
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(height: 40),
-              const Text(
-                'Perfil',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                'Email: $email',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 40),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-void main() {
-  runApp(MaterialApp(
-    home: const TelaLogin(),
-  ));
 }
