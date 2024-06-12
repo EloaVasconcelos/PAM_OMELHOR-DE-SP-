@@ -83,7 +83,7 @@ https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESENVOLVIMENTO-DO-PR
 > 
 > Link da Wiki com o vídeo e print das telas programadas 
 >
-https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/V%C3%8DDEO-E-INDICA%C3%87%C3%83O-(TELAS-PROGRAMADAS)-%E2%80%90-2-BIMESTRE#v%C3%ADdeo-e-indica%C3%A7%C3%A3o-das-telas---2-bimestre
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/V%C3%8DDEO-E-PRINT-(TELAS-PROGRAMADAS)-%E2%80%90-PARTE-2
 >
 
 
