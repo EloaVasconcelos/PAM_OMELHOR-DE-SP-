@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:pam_sp/segtela.dart'; 
  

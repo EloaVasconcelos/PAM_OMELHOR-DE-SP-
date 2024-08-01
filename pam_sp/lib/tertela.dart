@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart'; // Importando para o carrossel funcionar (site: pub dev)
 import 'telalogin.dart'; // Importando a tela de login
+import 'segtela.dart'; // Importando a tela de login
 
 // ignore: camel_case_types
 class tertela extends StatelessWidget {
@@ -184,7 +185,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 initialPage: 0,
                 enableInfiniteScroll: true,
                 reverse: false,
-                autoPlay: false, //automático ou não 
+                autoPlay: true, //automático ou não 
                 enlargeCenterPage: true,
                 onPageChanged: (index, reason) {
           
@@ -194,6 +195,74 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
           ],
         ),
       ),
+       bottomNavigationBar: BottomAppBar(
+          color: const Color.fromARGB(255, 58, 58, 58),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.home, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const segtela()),
+                      );
+                    },
+                  ),
+                  const Text(
+                    'Home',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.favorite, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const tertela()),
+                      );
+                    },
+                  ),
+                  const Text(
+                    'Favoritos',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.person, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const TelaLogin()),
+                      );
+                    },
+                  ),
+                  const Text(
+                    'Perfil',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
     );
   }
 }

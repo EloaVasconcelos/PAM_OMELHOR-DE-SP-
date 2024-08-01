@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pam_sp/telacadastrar.dart';
 import 'package:pam_sp/telaperfil.dart';
+import 'segtela.dart'; // Importando a tela de login
+import 'tertela.dart'; // Importando a tela de login
 
 class TelaLogin extends StatefulWidget {
   const TelaLogin({super.key});
@@ -135,6 +137,75 @@ class _TelaLoginState extends State<TelaLogin> {
           ),
         ],
       ),
+       bottomNavigationBar: BottomAppBar(
+          color: const Color.fromARGB(255, 58, 58, 58),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.home, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const segtela()),
+                      );
+                    },
+                  ),
+                  const Text(
+                    'Home',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.favorite, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const tertela()),
+                      );
+                    },
+                  ),
+                  const Text(
+                    'Favoritos',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  IconButton(
+                    icon: const Icon(Icons.person, color: Colors.white),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const TelaLogin()),
+                      );
+                    },
+                  ),
+                  const Text(
+                    'Perfil',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+
     );
   }
 }
