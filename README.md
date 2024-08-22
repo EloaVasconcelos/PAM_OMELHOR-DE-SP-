@@ -106,5 +106,17 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 
 
 
+# 3 BIMESTRE - ALTERAÇÕES E DESENVOLVIMENTO 
+> DUPLA: Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves
+>
+>
+## MATERIAIS DE APOIO
+
+>
+> https://youtu.be/5lpMnWvrwGs?si=9Ht71hNZYXqMkMxY
+>
+> https://youtu.be/pDnfJvh7uzc?si=fvnVSW8qvQEMn90p
+>
+
 
 
