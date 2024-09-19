@@ -106,5 +106,33 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 
 
 
+# 3 BIMESTRE - ALTERAÇÕES E DESENVOLVIMENTO 
+> DUPLA: Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves
+>
+>
+## MATERIAIS DE APOIO
+
+>
+> https://youtu.be/5lpMnWvrwGs?si=9Ht71hNZYXqMkMxY
+>
+> https://youtu.be/pDnfJvh7uzc?si=fvnVSW8qvQEMn90p
+
+### NOVAS IMPLEMENTAÇÕES 
+> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) e um Botão para "Veja Mais" ao clicar o usuário irá entrar na página individual de cada comida
+>
+>  O usuário terá a opção de Favoritar a comida  -> Implementação do Favoritar 
 
 
+## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO) 
+> 
+> PRINT 
+>
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki#t%C3%B3picos
+>
+> VÍDEO DA APLICAÇÃO 
+> 
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESCRI%C3%87%C3%83O-DETALHADA
+>
+
+
+<br>
