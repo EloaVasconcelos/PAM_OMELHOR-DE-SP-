@@ -123,7 +123,7 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 >  O usuário terá a opção de Favoritar a comida  -> Implementação do Favoritar 
 
 
-# VIDEOS E PRITNS (FINALIZAÇÃO APLICATIVO) 
+## VIDEOS E PRITNS (FINALIZAÇÃO APLICATIVO) 
 > 
 > PRINT 
 >
