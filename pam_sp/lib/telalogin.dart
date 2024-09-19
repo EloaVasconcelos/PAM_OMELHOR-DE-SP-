@@ -12,23 +12,27 @@ class TelaLogin extends StatefulWidget {
 }
 
 class _TelaLoginState extends State<TelaLogin> {
+  final TextEditingController nomeController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
+  final TextEditingController telefoneController = TextEditingController();
   final TextEditingController senhaController = TextEditingController();
 
   void _login() {
+    String nome = nomeController.text;
     String email = emailController.text;
+    String telefone = telefoneController.text; // Recupera o valor do telefone corretamente
 
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => TelaPerfil(email: email),
+        builder: (context) => TelaPerfil(email: email, telefone: telefone, nome: nome), // Agora passando o nome e telefone corretamente
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
+    return Scaffold(
       body: Stack(
         children: [
           // Imagem de fundo
@@ -67,12 +71,34 @@ class _TelaLoginState extends State<TelaLogin> {
                       color: Colors.black54,
                     ),
                   ),
+                  const SizedBox(height: 15),
+                  // Nome text field
+                  TextField(
+                    controller: nomeController,
+                    decoration: InputDecoration(
+                      labelText: 'Nome',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 20),
                   // Email text field
                   TextField(
                     controller: emailController,
                     decoration: InputDecoration(
                       labelText: 'Email',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  // Telefone text field
+                  TextField(
+                    controller: telefoneController,
+                    decoration: InputDecoration(
+                      labelText: 'Telefone',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                       ),
@@ -123,7 +149,7 @@ class _TelaLoginState extends State<TelaLogin> {
                         );
                       },
                       child: const Text(
-                        'Cadastra-se',
+                        'Cadastrar-se',
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.black54,
@@ -137,75 +163,68 @@ class _TelaLoginState extends State<TelaLogin> {
           ),
         ],
       ),
-       bottomNavigationBar: BottomAppBar(
-          color: const Color.fromARGB(255, 58, 58, 58),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.home, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const segtela()),
-                      );
-                    },
-                  ),
-                  const Text(
-                    'Home',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.favorite, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const tertela()),
-                      );
-                    },
-                  ),
-                  const Text(
-                    'Favoritos',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.person, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const TelaLogin()),
-                      );
-                    },
-                  ),
-                  const Text(
-                    'Perfil',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+      bottomNavigationBar: BottomAppBar(
+        color: const Color.fromARGB(255, 58, 58, 58),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.home, color: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const segtela()),
+                    );
+                  },
+                ),
+                const Text(
+                  'Home',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.favorite, color: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const tertela()),
+                    );
+                  },
+                ),
+                const Text(
+                  'Favoritos',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.person, color: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const TelaLogin()),
+                    );
+                  },
+                ),
+                const Text(
+                  'Perfil',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+            ),
+          ],
         ),
-
+      ),
     );
   }
 }

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart'; // Importando para o carrossel funcionar (site: pub dev)
-import 'telalogin.dart'; // Importando a tela de login
-import 'segtela.dart'; // Importando a tela de login
+import 'package:carousel_slider/carousel_slider.dart';
+import 'telalogin.dart';
+import 'favoritos.dart'; // Importar o favoritos.dart para usar o estado global
+import 'segtela.dart';
 
-// ignore: camel_case_types
+// Gerenciamento de estado global para os favoritos
+Set<Restaurant> favoritosGlobais = {};
+
 class tertela extends StatelessWidget {
   const tertela({super.key});
 
@@ -11,38 +14,31 @@ class tertela extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Restaurantes',
-      theme: ThemeData(
-      ),
-      home: const RestaurantScreen(), // Iniciando a tela de restaurantes
+      theme: ThemeData(),
+      home: const RestaurantScreen(),
     );
   }
 }
 
-// Classe para a tela de restaurantes
 class RestaurantScreen extends StatefulWidget {
   const RestaurantScreen({super.key});
 
-//instância da classe 
   @override
-  // ignore: library_private_types_in_public_api 
   _RestaurantScreenState createState() => _RestaurantScreenState();
 }
 
-//Sugestão 
 class _RestaurantScreenState extends State<RestaurantScreen> {
-  // Lista de restaurantes
-  // ignore: prefer_final_fields
   List<Restaurant> _restaurants = [
     Restaurant(
       name: 'Noah Gastronomia Paulista',
       description: 'Deliciosa Costela',
       location: 'Rua Peixoto Gomide, 707 Cerqueira César, São Paulo',
-      image: 'assets/1.png', //Imagem do restaurante 
+      image: 'assets/1.png',
     ),
     Restaurant(
       name: 'Bar do Alemão Família Steiner',
       description: 'Petiscos e refeições, além de chopes',
-      location: ' R. Pio XI, 1221 - Alto da Lapa, SP, 05060-001',
+      location: 'R. Pio XI, 1221 - Alto da Lapa, SP, 05060-001',
       image: 'assets/3.png',
     ),
     Restaurant(
@@ -65,18 +61,18 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/fundonovo.png'), //Colocando a imagem de fundo do aplicativo 
+            image: AssetImage('assets/fundonovo.png'),
             fit: BoxFit.cover,
           ),
         ),
         child: Column(
           children: [
-            const SizedBox(height:80), // Ajustando aondde o titulo vai ficar (colocando mais embaixo)
+            const SizedBox(height: 80),
             const Center(
               child: Column(
                 children: [
                   Text(
-                  'RESTAURANTES',  //Arrumando o titulo "Restaurantes"
+                    'RESTAURANTES',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -85,7 +81,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'O melhor de SP', // Colocando um subtitulo 
+                    'O melhor de SP',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.w400,
@@ -95,28 +91,24 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 45), // Ajustando o carrossel, em relação ao titulo anterior 
-
-
-
-
-
-            //Começando o Carrossel_slider 
+            const SizedBox(height: 45),
             CarouselSlider(
               items: _restaurants.map((restaurant) {
-              return Builder(
-              builder: (context) {
+                bool isFavorite = favoritosGlobais.contains(restaurant);
+                return Builder(
+                  builder: (context) {
                     return Container(
                       width: MediaQuery.of(context).size.width,
                       margin: const EdgeInsets.symmetric(horizontal: 5.0),
                       decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 134, 69, 37).withOpacity(0.9), //Cor de fundo do carrossel/ prototipo 
-                      borderRadius: BorderRadius.circular(8.0), //arredondar
+                        color: const Color.fromARGB(255, 134, 69, 37)
+                            .withOpacity(0.9),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: Column(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(40.0), //Deixando as bordas das imagem um pouco arredondadass
+                            borderRadius: BorderRadius.circular(40.0),
                             child: Image.asset(
                               restaurant.image,
                               width: 200,
@@ -124,8 +116,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                               fit: BoxFit.cover,
                             ),
                           ),
-
-                          //Arrumando os Nomes dos Restaurantes 
                           const SizedBox(height: 16),
                           Text(
                             restaurant.name,
@@ -135,8 +125,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                               color: Colors.white,
                             ),
                           ),
-
-                          //Arrumando a desc
                           const SizedBox(height: 8),
                           Text(
                             restaurant.description,
@@ -145,8 +133,6 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                               color: Colors.white,
                             ),
                           ),
-                          
-                          //Arrumando a Localização 
                           const SizedBox(height: 8),
                           Text(
                             restaurant.location,
@@ -155,29 +141,30 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                               color: Colors.white,
                             ),
                           ),
-
-                          // Para ir pra tela de login 
                           IconButton(
-                            icon: Image.asset(
-                              'assets/coracaobranci.png', // ícone de coração  e tambem definindo o tamanho (favoritar)
-                              width: 30,
-                              height: 30,
+                            icon: Icon(
+                              isFavorite
+                                  ? Icons.favorite
+                                  : Icons.favorite_border,
+                              color: Colors.red,
+                              size: 30,
                             ),
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const TelaLogin(), //Ao clicar no ícone de coração a tela de login
-                                ),
-                              );
+                              setState(() {
+                                if (isFavorite) {
+                                  favoritosGlobais.remove(restaurant);
+                                } else {
+                                  favoritosGlobais.add(restaurant);
+                                }
+                              });
                             },
                           ),
                         ],
                       ),
                     );
                   },
-                ); //FECHAR CERTO
-              }).toList(), //Alguns parâmetros legais 
+                );
+              }).toList(),
               options: CarouselOptions(
                 height: 400,
                 aspectRatio: 16 / 9,
@@ -185,89 +172,86 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 initialPage: 0,
                 enableInfiniteScroll: true,
                 reverse: false,
-                autoPlay: true, //automático ou não 
+                autoPlay: true,
                 enlargeCenterPage: true,
-                onPageChanged: (index, reason) {
-          
-                },
+                onPageChanged: (index, reason) {},
               ),
             ),
           ],
         ),
       ),
-       bottomNavigationBar: BottomAppBar(
-          color: const Color.fromARGB(255, 58, 58, 58),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.home, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const segtela()),
-                      );
-                    },
+      bottomNavigationBar: BottomAppBar(
+        color: const Color.fromARGB(255, 58, 58, 58),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.home, color: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const segtela()),
+                    );
+                  },
+                ),
+                const Text(
+                  'Home',
+                  style: TextStyle(
+                    color: Colors.white,
                   ),
-                  const Text(
-                    'Home',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.favorite, color: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) =>  Favoritos()),
+                    );
+                  },
+                ),
+                const Text(
+                  'Favoritos',
+                  style: TextStyle(
+                    color: Colors.white,
                   ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.favorite, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const tertela()),
-                      );
-                    },
+                ),
+              ],
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.person, color: Colors.white),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const TelaLogin()),
+                    );
+                  },
+                ),
+                const Text(
+                  'Perfil',
+                  style: TextStyle(
+                    color: Colors.white,
                   ),
-                  const Text(
-                    'Favoritos',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.person, color: Colors.white),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const TelaLogin()),
-                      );
-                    },
-                  ),
-                  const Text(
-                    'Perfil',
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+                ),
+              ],
+            ),
+          ],
         ),
+      ),
     );
   }
 }
 
-// classe do que foi/irá ser utilizado 
 class Restaurant {
   final String name;
   final String description;
@@ -280,4 +264,14 @@ class Restaurant {
     required this.location,
     required this.image,
   });
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Restaurant &&
+          runtimeType == other.runtimeType &&
+          name == other.name;
+
+  @override
+  int get hashCode => name.hashCode;
 }
