@@ -121,4 +121,18 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 > Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) e um Botão para "Veja Mais" ao clicar o usuário irá entrar na página individual de cada comida
 >
 >  O usuário terá a opção de Favoritar a comida  -> Implementação do Favoritar 
+
+
+# VIDEOS E PRITNS (FINALIZAÇÃO APLICATIVO) 
 > 
+> Home
+>
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki#t%C3%B3picos
+>
+> Descrição Detalhada
+> 
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESCRI%C3%87%C3%83O-DETALHADA
+>
+
+
+<br>
