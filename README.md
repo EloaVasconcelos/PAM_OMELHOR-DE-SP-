@@ -125,11 +125,11 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 
 # VIDEOS E PRITNS (FINALIZAÇÃO APLICATIVO) 
 > 
-> Home
+> PRINT 
 >
 https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki#t%C3%B3picos
 >
-> Descrição Detalhada
+> VÍDEO DA APLICAÇÃO 
 > 
 https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESCRI%C3%87%C3%83O-DETALHADA
 >
