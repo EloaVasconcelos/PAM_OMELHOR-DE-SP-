@@ -116,7 +116,11 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 > https://youtu.be/5lpMnWvrwGs?si=9Ht71hNZYXqMkMxY
 >
 > https://youtu.be/pDnfJvh7uzc?si=fvnVSW8qvQEMn90p
->
 
 
 
+### NOVAS IMPLEMENTAÇÕES 
+-> Implementações de Comidas FAVORITAS e suas respectivas com nome e descrição e o favoritar 
+-> 
+-> Tela de Cadastro e Login 
+-> 
