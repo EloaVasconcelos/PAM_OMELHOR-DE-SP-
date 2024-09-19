@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pam_sp/telalogin.dart';
-import 'package:pam_sp/telalogin.dart';
 import 'package:pam_sp/tertela.dart';
 
 class segtela extends StatelessWidget {
