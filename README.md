@@ -140,10 +140,6 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 <br>
 
 ## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) (Colocar o atualizado) 
-> 
-> PRINT 
->
-https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki#t%C3%B3picos
 >
 > VÍDEO DA APLICAÇÃO FINALIZADA 
 > 
