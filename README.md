@@ -104,7 +104,7 @@ https://gist.github.com/messaismael/cc2808c3ad2fc2a4463f0e218234d867
 >
 https://github.com/alinefbrito/flutter_exemplo01/branches
 
-
+<br><br><br>
 
 # 3 BIMESTRE - ALTERAÇÕES E DESENVOLVIMENTO 
 > DUPLA: Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves
@@ -117,13 +117,28 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 >
 > https://youtu.be/pDnfJvh7uzc?si=fvnVSW8qvQEMn90p
 
-### NOVAS IMPLEMENTAÇÕES 
-> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) e um Botão para "Veja Mais" ao clicar o usuário irá entrar na página individual de cada comida
+
+
+
+### MUDANÇAS NO LAYOUt E MAPA DE NAVEGAÇÃO 
 >
->  O usuário terá a opção de Favoritar a comida  -> Implementação do Favoritar 
+> https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVEGA%C3%87%C3%83O
 
 
-## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO) 
+<br>
+
+### NOVAS IMPLEMENTAÇÕES 
+> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) E ação de favoritar 
+>
+>  O usuário terá a opção de Favoritar a comida típica e tambem restaurantes de SP
+>
+> Realização de Cadastro e Login
+>
+> Visualização do perfil do usuário, onde poderá acessar seus favoritos 
+
+<br>
+
+## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) (Colocar o atualizado) 
 > 
 > PRINT 
 >
