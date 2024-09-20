@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pam_sp/comtela.dart';
+import 'package:pam_sp/favoritos.dart';
 import 'package:pam_sp/telalogin.dart';
 import 'package:pam_sp/tertela.dart';
 
@@ -85,7 +87,7 @@ class segtela extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const tertela()),
+                        MaterialPageRoute(builder: (context) =>  Favoritos()),
                       );
                     },
                   ),
@@ -147,12 +149,19 @@ class CardList extends StatelessWidget {
             imagePath: 'assets/image1.png',
           ),
         ),
-        const SizedBox(height: 16),
-        const CardWidget(
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const comtela()),
+            );
+          },
+        child: const CardWidget(
           title: 'PRATOS TÍPICOS',
           subtitle: 'Melhores Pratos da SP',
           color: Color(0xFF292929),
           imagePath: 'assets/image2.png',
+        ),
         ),
       ],
     );

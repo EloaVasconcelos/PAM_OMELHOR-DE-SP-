@@ -50,7 +50,7 @@ class TelaPerfil extends StatelessWidget {
                     const SizedBox(height: 20.0),
                     const CircleAvatar(
                       backgroundImage: AssetImage(
-                        "assets/1.png", // Substitua com a imagem correta
+                        "assets/perfil.jpg", // Substitua com a imagem correta
                       ),
                       radius: 100.0,
                     ),

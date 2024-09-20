@@ -27,11 +27,6 @@ class _FavoritosState extends State<Favoritos> {
           : ListView.builder(
               itemCount: favoritosGlobais.length,
               itemBuilder: (context, index) {
-                // Verifique se o índice é válido antes de acessar a lista
-                if (index >= favoritosGlobais.length) {
-                  return Container(); // Retorna um widget vazio se o índice estiver fora do intervalo
-                }
-                
                 final restaurant = favoritosGlobais.elementAt(index);
                 return Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -82,8 +77,10 @@ class _FavoritosState extends State<Favoritos> {
                         IconButton(
                           onPressed: () {
                             setState(() {
-                              // Função para remover o item dos favoritos
                               favoritosGlobais.remove(restaurant);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('${restaurant.name} removido dos favoritos')),
+                              );
                             });
                           },
                           icon: const Icon(Icons.delete, color: Colors.grey),
@@ -105,7 +102,7 @@ class _FavoritosState extends State<Favoritos> {
                 IconButton(
                   icon: const Icon(Icons.home, color: Colors.white),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => const segtela()),
                     );
@@ -123,10 +120,7 @@ class _FavoritosState extends State<Favoritos> {
                 IconButton(
                   icon: const Icon(Icons.favorite, color: Colors.white),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const tertela()),
-                    );
+                    // Não navegue para a mesma tela se já estiver nela
                   },
                 ),
                 const Text(
@@ -141,7 +135,7 @@ class _FavoritosState extends State<Favoritos> {
                 IconButton(
                   icon: const Icon(Icons.person, color: Colors.white),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) => const TelaLogin()),
                     );
