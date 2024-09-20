@@ -139,7 +139,7 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 
 <br>
 
-## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) (Colocar o atualizado) 
+## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) 
 >
 > VÍDEO DA APLICAÇÃO FINALIZADA 
 > 
