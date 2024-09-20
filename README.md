@@ -120,11 +120,13 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 
 
 
-### MUDANÇAS NO LAYOU E MAPA DE NAVEGAÇÃO 
+### MUDANÇAS NO LAYOUt E MAPA DE NAVEGAÇÃO 
 >
 > https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/LAYOUT-E-MAPA-DE-NAVEGA%C3%87%C3%83O
->
->
+
+
+<br>
+
 ### NOVAS IMPLEMENTAÇÕES 
 > Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) E ação de favoritar 
 >
@@ -134,8 +136,9 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 >
 > Visualização do perfil do usuário, onde poderá acessar seus favoritos 
 
+<br>
 
-## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) 
+## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) (Colocar o atualizado) 
 > 
 > PRINT 
 >
