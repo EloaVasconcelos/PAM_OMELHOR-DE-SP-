@@ -128,13 +128,14 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 <br>
 
 ### NOVAS IMPLEMENTAÇÕES 
-> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) E ação de favoritar 
+> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME E PREÇO)
 >
->  O usuário terá a opção de Favoritar a comida típica e tambem restaurantes de SP
+>  O usuário terá a opção de Favoritar os Restaurantes de SP
 >
 > Realização de Cadastro e Login
 >
 > Visualização do perfil do usuário, onde poderá acessar seus favoritos 
+
 
 <br>
 
@@ -144,9 +145,9 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 >
 https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki#t%C3%B3picos
 >
-> VÍDEO DA APLICAÇÃO 
+> VÍDEO DA APLICAÇÃO FINALIZADA 
 > 
-https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESCRI%C3%87%C3%83O-DETALHADA
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/Video-%E2%80%90-APP-FINALIZADO
 >
 
 
