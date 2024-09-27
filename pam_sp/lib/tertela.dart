@@ -7,6 +7,7 @@ import 'segtela.dart';
 // Gerenciamento de estado global para os favoritos
 Set<Restaurant> favoritosGlobais = {};
 
+// ignore: camel_case_types
 class tertela extends StatelessWidget {
   const tertela({super.key});
 
@@ -24,10 +25,12 @@ class RestaurantScreen extends StatefulWidget {
   const RestaurantScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _RestaurantScreenState createState() => _RestaurantScreenState();
 }
 
 class _RestaurantScreenState extends State<RestaurantScreen> {
+  // ignore: prefer_final_fields
   List<Restaurant> _restaurants = [
     Restaurant(
       name: 'Noah Gastronomia Paulista',
@@ -180,7 +183,7 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: BottomAppBar(height: 85,
         color: const Color.fromARGB(255, 58, 58, 58),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

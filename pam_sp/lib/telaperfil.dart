@@ -5,7 +5,7 @@ import 'package:pam_sp/telalogin.dart';
 import 'package:pam_sp/tertela.dart';
 
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
   home: TelaPerfil(email: 'example@example.com', telefone: '1234567890', nome: 'User Name'), // Passe o email, telefone e nome como parâmetros corretos
 ));
 
@@ -14,6 +14,7 @@ class TelaPerfil extends StatelessWidget {
   final String telefone;
   final String nome;
 
+  // ignore: use_super_parameters
   const TelaPerfil({Key? key, required this.email, required this.telefone, required this.nome}) : super(key: key);
 
   @override
@@ -32,6 +33,7 @@ class TelaPerfil extends StatelessWidget {
                 ],
               ),
             ),
+            // ignore: sized_box_for_whitespace
             child: Container(
               width: double.infinity,
               height: 350.0,
@@ -132,7 +134,7 @@ class TelaPerfil extends StatelessWidget {
           const SizedBox(height: 40),
         ],
       ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: BottomAppBar(height: 85,
         color: const Color.fromARGB(255, 58, 58, 58),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -8,6 +8,7 @@ class TelaLogin extends StatefulWidget {
   const TelaLogin({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TelaLoginState createState() => _TelaLoginState();
 }
 
@@ -163,7 +164,7 @@ class _TelaLoginState extends State<TelaLogin> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: BottomAppBar(height: 85,
         color: const Color.fromARGB(255, 58, 58, 58),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -3,8 +3,10 @@ import 'package:pam_sp/segtela.dart';
 import 'package:pam_sp/telalogin.dart';
 import 'tertela.dart'; // Importando tertela.dart para acessar os favoritos globais
 
+// ignore: use_key_in_widget_constructors
 class Favoritos extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _FavoritosState createState() => _FavoritosState();
 }
 
@@ -91,7 +93,7 @@ class _FavoritosState extends State<Favoritos> {
                 );
               },
             ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: BottomAppBar(height: 85,
         color: const Color.fromARGB(255, 58, 58, 58),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

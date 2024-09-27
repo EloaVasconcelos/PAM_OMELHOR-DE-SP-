@@ -4,7 +4,9 @@ import 'package:pam_sp/favoritos.dart';
 import 'package:pam_sp/telalogin.dart';
 import 'package:pam_sp/tertela.dart';
 
+// ignore: camel_case_types
 class segtela extends StatelessWidget {
+  // ignore: use_super_parameters
   const segtela({Key? key}) : super(key: key);
 
   @override
@@ -54,7 +56,7 @@ class segtela extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: BottomAppBar(
+        bottomNavigationBar: BottomAppBar(height: 85,
           color: const Color.fromARGB(255, 58, 58, 58),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -128,6 +130,7 @@ class segtela extends StatelessWidget {
 }
 
 class CardList extends StatelessWidget {
+  // ignore: use_super_parameters
   const CardList({Key? key}) : super(key: key);
 
   @override
@@ -174,6 +177,7 @@ class CardWidget extends StatelessWidget {
   final Color color;
   final String imagePath;
 
+  // ignore: use_super_parameters
   const CardWidget({
     Key? key,
     required this.title,

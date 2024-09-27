@@ -3,11 +3,11 @@ import 'package:pam_sp/favoritos.dart';
 import 'package:pam_sp/segtela.dart';
 import 'package:pam_sp/telalogin.dart';
 import 'prato.dart'; // Importando o modelo de Prato
-import 'tertela.dart'; // Para acessar os favoritos globais
 
 // Gerenciamento de estado global para os favoritos
 Set<Prato> favoritosGlobais = {};
 
+// ignore: camel_case_types
 class comtela extends StatefulWidget {
   const comtela({super.key});
 
@@ -15,6 +15,7 @@ class comtela extends StatefulWidget {
   State<comtela> createState() => _comtelaState();
 }
 
+// ignore: camel_case_types
 class _comtelaState extends State<comtela> {
   @override
   Widget build(BuildContext context) {
@@ -50,7 +51,7 @@ class _comtelaState extends State<comtela> {
                   final List<String> images = [
                     'assets/coxinha.jpg',
                     'assets/feijoada.jpg',
-                    'assets/pastel.jpg',
+                    'assets/pastel1.jpg',
                     'assets/pao.jpg',
                     'assets/espetinho.jpg',
                     'assets/mortadela.jpg',
@@ -74,7 +75,7 @@ class _comtelaState extends State<comtela> {
                     'Feijão',
                     'Misto Quente',
                     'Pudim',
-                    'Hamburgue',
+                    'Hamburguer',
                   ];
 
                   // Lista de preços para cada prato
@@ -97,8 +98,6 @@ class _comtelaState extends State<comtela> {
                   final String name = names[index % names.length];
                   final String price = prices[index % prices.length];
 
-                  // Criar o prato atual
-                  final Prato prato = Prato(name: name, image: imagePath);
 
                   return StatefulBuilder(
                     builder: (BuildContext context, StateSetter setState) {
@@ -144,7 +143,7 @@ class _comtelaState extends State<comtela> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
+      bottomNavigationBar: BottomAppBar( height: 85,
         color: const Color.fromARGB(255, 58, 58, 58),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -7,6 +7,7 @@ class TelaCadastro extends StatefulWidget {
   const TelaCadastro({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TelaCadastroState createState() => _TelaCadastroState();
 }
 
@@ -35,11 +36,11 @@ class _TelaCadastroState extends State<TelaCadastro> {
               decoration: BoxDecoration(
                 color: Colors.white, // Cor de fundo do container
                 borderRadius: BorderRadius.circular(20), // Cantos arredondados
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black26, // Sombra preta suave
                     blurRadius: 10, // Desfocagem da sombra
-                    offset: const Offset(0, 4), // Deslocamento da sombra
+                    offset: Offset(0, 4), // Deslocamento da sombra
                   ),
                 ],
               ),
@@ -151,7 +152,7 @@ class _TelaCadastroState extends State<TelaCadastro> {
           ),
         ],
       ),
-       bottomNavigationBar: BottomAppBar(
+       bottomNavigationBar: BottomAppBar(height: 85,
           color: const Color.fromARGB(255, 58, 58, 58),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
