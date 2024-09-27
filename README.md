@@ -3,7 +3,7 @@ Aplicativo em Flutter - O Melhor de SP
 
 > *Nome do Projeto:* O Melhor de SP.
 > 
-> *Integrantes:* Eloá Vasconcelos de Macedo e Laura Cristine Silva.
+> ## *Integrantes:* Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves 
 > 
 > *Descrição do Projeto:* O aplicativo “O Melhor de SP” tem como intuito disponibilizar uma variedade de informações sobre a vasta cultura culinária de uma das cidades mais populosas do mundo, São Paulo. 
 > 
@@ -107,7 +107,7 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 <br><br><br>
 
 # 3 BIMESTRE - ALTERAÇÕES E DESENVOLVIMENTO 
-> DUPLA: Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves
+> ## DUPLA: Eloá Vasconcelos de Macedo e Isabela de Oliveira Alves
 >
 >
 ## MATERIAIS DE APOIO
@@ -128,25 +128,22 @@ https://github.com/alinefbrito/flutter_exemplo01/branches
 <br>
 
 ### NOVAS IMPLEMENTAÇÕES 
-> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME) E ação de favoritar 
+> Implementações de Comidas: Implementando a tela de comidas tipícas (FOTO E NOME E PREÇO)
 >
->  O usuário terá a opção de Favoritar a comida típica e tambem restaurantes de SP
+>  O usuário terá a opção de Favoritar os Restaurantes de SP
 >
 > Realização de Cadastro e Login
 >
 > Visualização do perfil do usuário, onde poderá acessar seus favoritos 
 
+
 <br>
 
-## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) (Colocar o atualizado) 
-> 
-> PRINT 
+## VÍDEOS E PRINTS (FINALIZAÇÃO APLICATIVO - 3 BIMESTRE) 
 >
-https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki#t%C3%B3picos
->
-> VÍDEO DA APLICAÇÃO 
+> VÍDEO DA APLICAÇÃO FINALIZADA 
 > 
-https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/DESCRI%C3%87%C3%83O-DETALHADA
+https://github.com/EloaVasconcelos/PAM_OMELHOR-DE-SP-/wiki/Video-%E2%80%90-APP-FINALIZADO
 >
 
 
